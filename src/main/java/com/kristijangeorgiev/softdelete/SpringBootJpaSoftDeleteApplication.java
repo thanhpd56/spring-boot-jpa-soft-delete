@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.kristijangeorgiev.softdelete.util.CustomJpaRepositoryFactoryBean;
+import org.springframework.web.SpringServletContainerInitializer;
 
 /**
  * 
@@ -18,7 +19,7 @@ import com.kristijangeorgiev.softdelete.util.CustomJpaRepositoryFactoryBean;
 
 @SpringBootApplication
 @EnableJpaRepositories(repositoryFactoryBeanClass = CustomJpaRepositoryFactoryBean.class)
-public class SpringBootJpaSoftDeleteApplication {
+public class SpringBootJpaSoftDeleteApplication extends SpringServletContainerInitializer{
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootJpaSoftDeleteApplication.class, args);
